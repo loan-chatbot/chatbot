@@ -1,27 +1,20 @@
-# This files contains your custom actions which can be used to run
-# custom Python code.
-#
-# See this guide on how to implement these action:
-# https://rasa.com/docs/rasa/core/actions/#custom-actions/
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
 
 
-# This is a simple example for a custom action which utters "Hello World!"
+class ActionGetHelp(Action):
 
-# from typing import Any, Text, Dict, List
-#
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-#
-#
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message("Hello World!")
-#
-#         return []
+    def name(self):
+        return "action_get_help"
+
+    
+    def run(self, dispatcher, tracker, domain):
+        size=field=order=""
+        size = tracker.get_slot('size')
+        field = tracker.get_slot('field')
+        order = tracker.get_slot('order')
+        message= "Size:" + size + "\nField: " + field + "\nOrder: " + order
+
+        dispatcher.utter_message(message)
+
+        return []

@@ -1,31 +1,58 @@
 intents:
   - greet
-  - goodbye
+  - bye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
-
+  - help
+  - name
+  
 actions:
+- action_get_help
 - utter_greet
-- utter_cheer_up
 - utter_did_that_help
+- utter_ask_help
+- utter_anything_else
 - utter_happy
-- utter_goodbye
+- utter_bye
+- utter_default
+
+slots:
+  PERSON:
+    type: text
+  size:
+    type: text
+  order:
+    type: text
+  field:
+    type: text
+
+entities:
+- PERSON
+- size
+- field
+- order
 
 templates:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: "Hey!\nWhat's your name?"
 
   utter_did_that_help:
   - text: "Did that help you?"
 
+  utter_ask_help:
+  - text: "{PERSON}, How can I help you?"
+
+  utter_anything_else:
+  - text: No worries. Is there anything else I can help you with?
+  - text: No worries. Let me know if there is anything else I can help you with
+
   utter_happy:
   - text: "Great carry on!"
 
-  utter_goodbye:
+  utter_bye:
   - text: "Bye"
+
+  utter_default:
+  - text: I am not sure what you're aiming for
+  - text: I am sorry but I am not able to get you.
+  - text: My appologies but I am not able to get you
