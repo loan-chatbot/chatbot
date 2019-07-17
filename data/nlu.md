@@ -82,3 +82,25 @@
 - can i see the list of [Sales Officers](field) of size [twenty](size) from the [top](order) by their loan count for last six days
 - display [descending](order) order of [Executive Officials](field) by their salary for last 10 years
 - display [ascending](order) order of [Sales Officials](field) by their salary for last three years 
+
+- Get me [total loans](count) disbursed in [last month](time)
+- Get me [total loans](count) disbursed in [last quater](time)
+- Get me [total loans](count) disbursed in [last year](time)
+- Get me [total loans](count) disbursed in the [last month of last year](time)
+- Get me [total amount](amount) of loans disbursed in the [same month last year](time)
+- Get me [total loans](count) disbursed in the month of [january 2018](time)
+- What is the [total outflow](count) in [last 5 years](time)?
+
+- Compare [amount of loans](amount) disbursed in the [current](time1) [month](time) against [previous](time2) [month](time)
+- Compare [loans](count) disbursed in the [first 15 days](time1) against [last 15 days](time2) in the [previous month](time).
+- Compare the [loans](count) disbursed in the [all the quarters](time1) in the [previous year](time).
+- Compare the [quarterly](time1) [loan amounts](amount) disbursed in the [current year](time)
+- Is this [quarter](time1) [loan](count) performance better than [previous](time2) one?
+
+- Get me the total [active](refrence_time) [loans](count) of [this year](time)
+- Get me the total [active](refrence_time) [loans](count) of [25th of april this year](time)
+- Get me the total [live](refrence_time) [loans](count) between [April](time1) to [May](time2) of [this year](time)
+- How many [loans](count) created in the [last year](time) are still [active](refrence_time)?
+- What is the count of [live](refrence_time) [loans](count) as of [April 2019](time)?
+
+

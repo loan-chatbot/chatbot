@@ -25,13 +25,32 @@ slots:
     type: text
   field:
     type: text
+  count:
+    type: text
+  time:
+    type: text
+  time1:
+    type: text
+  time2:
+    type: text
+  time3:
+    type: text
+  amount:
+    type: text
+  refrence_time:
+    type: text
 
 entities:
 - PERSON
 - size
 - field
 - order
-
+- count
+- amount
+- time
+- time1
+- time2
+- refrence_time
 templates:
   utter_greet:
   - text: "Hey!\nWhat's your name?"
