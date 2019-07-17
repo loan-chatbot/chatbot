@@ -21,20 +21,11 @@ class ActionGetHelp(Action):
         allreg = tracker.get_slot('allreg') 
         reg1 = tracker.get_slot('reg1') 
         reg2 = tracker.get_slot('reg2') 
+
+        message = "\nSize: " + size + "\nField: " + field + "\nOrder: " + order + "\nCount:  " + count + "\nAmount: "+ amount + "\nTime: " + time + "\nTime1: " + time1 + "\nTime2: " + time2 + "\nRefrence time: " + refrence_time +"\nAll Reg: " + allreg + "\nReg1: " + reg1 + "\nReg2: " + reg2    
         
-        
-        dispatcher.utter_message(size)
-        dispatcher.utter_message(field)
-        dispatcher.utter_message(count)
-        dispatcher.utter_message(amount)
-        dispatcher.utter_message(order)
-        dispatcher.utter_message(time)
-        dispatcher.utter_message(time1)
-        dispatcher.utter_message(time2)
-        dispatcher.utter_message(refrence_time)
-        dispatcher.utter_message(reg1)
-        dispatcher.utter_message(allreg)
-        dispatcher.utter_message(reg2)
+        dispatcher.utter_message(message)
+
         
 
         return []

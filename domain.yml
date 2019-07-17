@@ -19,32 +19,46 @@ actions:
 slots:
   PERSON:
     type: text
+    initial_value: "User"
   size:
     type: text
+    initial_value: ""
   order:
     type: text
+    initial_value: ""
   field:
     type: text
+    initial_value: ""
   count:
     type: text
+    initial_value: ""
   time:
     type: text
+    initial_value: ""
   time1:
     type: text
+    initial_value: ""
   time2:
     type: text
+    initial_value: ""
   time3:
     type: text
+    initial_value: ""
   amount:
     type: text
+    initial_value: ""
   refrence_time:
     type: text
+    initial_value: ""
   allreg:
     type: text 
+    initial_value: ""
   reg1:
     type: text 
+    initial_value: ""
   reg2:
     type: text
+    initial_value: ""
 
 entities:
 - PERSON
