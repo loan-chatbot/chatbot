@@ -8,13 +8,28 @@ class ActionGetHelp(Action):
         return "action_get_help"
 
     
-    def run(self, dispatcher, tracker, domain):
-        size=field=order=""
-        size = tracker.get_slot('size')
-        field = tracker.get_slot('field')
-        order = tracker.get_slot('order')
-        message= "Size:" + size + "\nField: " + field + "\nOrder: " + order
-
-        dispatcher.utter_message(message)
+    def run(self, dispatcher, tracker, domain): 
+        size =tracker.get_slot('size') 
+        field =tracker.get_slot('field')
+        order = tracker.get_slot('order') 
+        count =  tracker.get_slot('count') 
+        amount = tracker.get_slot('amount') 
+        time =tracker.get_slot('time') 
+        time1 = tracker.get_slot('time1') 
+        time2 =  tracker.get_slot('time2') 
+        refrence_time = tracker.get_slot('refrence_time') 
+        
+        
+        dispatcher.utter_message(size)
+        dispatcher.utter_message(field)
+        dispatcher.utter_message(count)
+        dispatcher.utter_message(amount)
+        dispatcher.utter_message(order)
+        dispatcher.utter_message(time)
+        dispatcher.utter_message(time1)
+        dispatcher.utter_message(time2)
+        dispatcher.utter_message(refrence_time)
+        
+        
 
         return []
