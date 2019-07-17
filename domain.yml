@@ -39,6 +39,12 @@ slots:
     type: text
   refrence_time:
     type: text
+  allreg:
+    type: text 
+  reg1:
+    type: text 
+  reg2:
+    type: text
 
 entities:
 - PERSON
@@ -51,6 +57,11 @@ entities:
 - time1
 - time2
 - refrence_time
+- allreg
+- reg1
+- reg2
+
+
 templates:
   utter_greet:
   - text: "Hey!\nWhat's your name?"
