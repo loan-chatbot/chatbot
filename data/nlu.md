@@ -73,7 +73,7 @@
 - [Jason](PERSON)
 
 ## intent:help
-- get me the list of [top](order) [10](size) [Sales Officers](field) by their loan count
+<!-- - get me the list of [top](order) [10](size) [Sales Officers](field) by their loan count
 - get me the month over month Loan Amount of [top](order) [ten](size) [Sales Officers](field) for last 6 months
 - get me the list of [bottom](order) [5](size) [Sales Officers](field) by their loan count
 - give me the month over month Loan Amount for last 6 months from [top](order) [ten](size) [Sales officials](field)
@@ -81,7 +81,7 @@
 - show me month over month Loan Amount sum of the [ten](size) [Sales Officers](field) from the [top](order)
 - can i see the list of [Sales Officers](field) of size [twenty](size) from the [top](order) by their loan count for last six days
 - display [descending](order) order of [Executive Officials](field) by their salary for last 10 years
-- display [ascending](order) order of [Sales Officials](field) by their salary for last three years 
+- display [ascending](order) order of [Sales Officials](field) by their salary for last three years  -->
 
 
 - Get me [total loans](count) disbursed in [last month](time)
@@ -107,11 +107,11 @@
 - What is the count of [live](refrence_time) [loans](count) as of [April 2019](time)?
 
 
-- Get me [total NPA](count) as of [today](time)
+- Get me [total NPA](amount) as of [today](time)
 
 
-- How [many NPAs](count) have be foreclosed in the [last year](time)
-- How [many NPAs](count) have be foreclosed in the [last financial year](time)
+- How [many NPAs](count)  have be [foreclosed](closure) in the [last year](time)
+- How [many NPAs](count)  have be [foreclosed](closure) in the [last financial year](time)
 
 
 - Compare the [loans](count) performance between [all states](allreg)

@@ -5,6 +5,7 @@
 - utter_ask_help
 * help
 - action_get_help
+- action_restart
 - utter_did_that_help
 * affirm
 - utter_anything_else
@@ -19,6 +20,7 @@
 - utter_ask_help
 * help
 - action_get_help
+- action_restart
 - utter_did_that_help
 * affirm
 - utter_anything_else
@@ -26,6 +28,7 @@
 - utter_ask_help
 * help
 - action_get_help
+- action_restart
 - utter_did_that_help
 * affirm
 - utter_anything_else
@@ -40,12 +43,14 @@
 - utter_ask_help
 * help
 - action_get_help
+- action_restart
 - utter_did_that_help
 * deny
 - utter_default
 - utter_ask_help
 * help
 - action_get_help
+- action_restart
 - utter_did_that_help
 * affirm
 - utter_anything_else
@@ -57,6 +62,7 @@
 ## help path
 * help
 - action_get_help
+- action_restart
 - utter_did_that_help
 
 ## anything path
