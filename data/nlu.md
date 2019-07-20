@@ -1,9 +1,11 @@
 ## intent:greet
 - Hi
 - Hey
+- hey
 - Hi bot
 - Hey bot
 - Hello
+- hi
 - Good morning
 - hi again
 - hi folks
@@ -18,7 +20,7 @@
 - what are you?
 - what's up
 - how do you do?
-- Heyy
+- heyy
 
 ## intent:bye
 - Bye

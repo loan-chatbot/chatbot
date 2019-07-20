@@ -1,11 +1,8 @@
 ## happy path
 * greet
 - utter_greet
-<!-- * name -->
-<!-- - utter_ask_help -->
 * help
 - action_get_help
-- action_restart
 - utter_did_that_help
 * affirm
 - utter_anything_else
@@ -16,19 +13,15 @@
 ## happy path 2
 * greet
 - utter_greet
-<!-- * name -->
-<!-- - utter_ask_help -->
 * help
 - action_get_help
-- action_restart
 - utter_did_that_help
 * affirm
 - utter_anything_else
 * affirm
-<!-- - utter_ask_help -->
+- action_restart
 * help
 - action_get_help
-- action_restart
 - utter_did_that_help
 * affirm
 - utter_anything_else
@@ -39,18 +32,14 @@
 ## sad path
 * greet
 - utter_greet
-<!-- * name -->
-<!-- - utter_ask_help -->
 * help
 - action_get_help
-- action_restart
 - utter_did_that_help
 * deny
+- action_restart
 - utter_default
-<!-- - utter_ask_help -->
 * help
 - action_get_help
-- action_restart
 - utter_did_that_help
 * affirm
 - utter_anything_else
@@ -60,25 +49,30 @@
 - utter_bye
 
 ## help path
-- utter_greet
 * help
 - action_get_help
-- action_restart
 - utter_did_that_help
-
-## askhelp path
+* deny
+- action_restart
+* help
 - action_get_help
-- action_restart
 - utter_did_that_help
-* affirm
-
-## anything path
 * affirm
 - utter_anything_else
-
-
-
-## bye path
 * deny
 - utter_happy
 - utter_bye
+
+
+## askhelptrue path
+- action_get_help
+- utter_did_that_help
+* affirm
+- utter_anything_else
+
+## askhelpfalse path
+- action_get_help
+- utter_did_that_help
+* deny
+- action_restart
+ 
