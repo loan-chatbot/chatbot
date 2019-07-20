@@ -4,13 +4,13 @@ intents:
   - affirm
   - deny
   - help
-  - name
+  # - name
   
 actions:
 - action_get_help
 - utter_greet
 - utter_did_that_help
-- utter_ask_help
+# - utter_ask_help
 - utter_anything_else
 - utter_happy
 - utter_bye
@@ -19,7 +19,7 @@ actions:
 slots:
   PERSON:
     type: text
-    initial_value: "User"
+    initial_value: ""
   size:
     type: text
     initial_value: ""
@@ -82,13 +82,13 @@ entities:
 
 templates:
   utter_greet:
-  - text: "Hey!\nWhat's your name?"
+  - text: "Hey!\nHow can I help you?"
 
   utter_did_that_help:
   - text: "Did that help you?"
 
-  utter_ask_help:
-  - text: "{PERSON}, How can I help you?"
+  # utter_ask_help:
+  # - text: "How can I help you?"
 
   utter_anything_else:
   - text: No worries. Is there anything else I can help you with?

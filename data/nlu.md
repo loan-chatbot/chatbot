@@ -62,7 +62,7 @@
 - not really
 - nope
 
-## intent:name
+<!-- ## intent:name
 - i am [Pranav](PERSON)
 - hi i'm [Adithya Arvind](PERSON)
 - my name is [balu](PERSON)
@@ -70,9 +70,9 @@
 - [jack](PERSON)
 - im [abhi](PERSON)
 - Myself [Abhinav](PERSON)
-- [Jason](PERSON)
+- [Jason](PERSON) -->
 
-## intent:help
+<!-- ## intent:help -->
 <!-- - get me the list of [top](order) [10](size) [Sales Officers](field) by their loan count
 - get me the month over month Loan Amount of [top](order) [ten](size) [Sales Officers](field) for last 6 months
 - get me the list of [bottom](order) [5](size) [Sales Officers](field) by their loan count
@@ -121,10 +121,10 @@
 
 
 - Which is the [top](order) performing [sales officer](field) for [last 6 months](time) based on [amount](count)
-- Which is the worst performing [sales officer[(field)] for [last 1year](time) based on [count](count)
+- Which is the worst performing [sales officer](field) for [last 1year](time) based on [count](count)
 - Who is the [top](order) performing [sales officer](field) for [Karnataka](reg1)
 
 
-- Get me [monthly](time) sales performance of [sales officer](field) [ABCD](PERSON)
+- Get me [monthly](time) [sales performance](count) of [sales officer](field) [ABCD](PERSON)
 
 
