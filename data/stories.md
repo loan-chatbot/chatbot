@@ -1,78 +1,59 @@
-## happy path
+## 1 happy path
 * greet
-- utter_greet
+    - utter_greet
 * help
-- action_get_help
-- utter_did_that_help
+    - action_get_help
+    - utter_did_that_help
 * affirm
-- utter_anything_else
+    - utter_anything_else
 * deny
-- utter_happy
-- utter_bye
-
-## happy path 2
-* greet
-- utter_greet
-* help
-- action_get_help
-- utter_did_that_help
-* affirm
-- utter_anything_else
-* affirm
-- action_restart
-* help
-- action_get_help
-- utter_did_that_help
-* affirm
-- utter_anything_else
-* deny
-- utter_happy
-- utter_bye
-
-## sad path
-* greet
-- utter_greet
-* help
-- action_get_help
-- utter_did_that_help
-* deny
-- action_restart
-- utter_default
-* help
-- action_get_help
-- utter_did_that_help
-* affirm
-- utter_anything_else
-* deny
-- utter_happy
+    - utter_happy
 * bye
-- utter_bye
+    - utter_bye
 
-## help path
+## 1 help path
 * help
-- action_get_help
-- utter_did_that_help
-* deny
-- action_restart
-* help
-- action_get_help
-- utter_did_that_help
+    - action_get_help
+    - utter_did_that_help
 * affirm
-- utter_anything_else
+    - utter_anything_else
 * deny
-- utter_happy
-- utter_bye
+    - utter_happy
+* bye
+    - utter_bye
 
-
-## askhelptrue path
-- action_get_help
-- utter_did_that_help
+## 1 affirm path
 * affirm
-- utter_anything_else
-
-## askhelpfalse path
-- action_get_help
-- utter_did_that_help
+    - utter_anything_else
 * deny
-- action_restart
+    - utter_happy
+* bye
+    - utter_bye
+
+## 1 deny path
+* deny
+    - utter_happy
+* bye
+    - utter_bye
+
+## 1 bye path
+* bye
+    - utter_bye
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
+
+

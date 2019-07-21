@@ -1,106 +1,95 @@
-intents:
-  - greet
-  - bye
-  - affirm
-  - deny
-  - help
-  # - name
-  
+%YAML 1.1
+---
 actions:
 - action_get_help
-- utter_greet
-- utter_did_that_help
-# - utter_ask_help
 - utter_anything_else
-- utter_happy
+- utter_ask_help
 - utter_bye
 - utter_default
-
-slots:
-  PERSON:
-    type: text
-    initial_value: ""
-  size:
-    type: text
-    initial_value: ""
-  order:
-    type: text
-    initial_value: ""
-  field:
-    type: text
-    initial_value: ""
-  count:
-    type: text
-    initial_value: ""
-  time:
-    type: text
-    initial_value: ""
-  time1:
-    type: text
-    initial_value: ""
-  time2:
-    type: text
-    initial_value: ""
-  time3:
-    type: text
-    initial_value: ""
-  amount:
-    type: text
-    initial_value: ""
-  refrence_time:
-    type: text
-    initial_value: ""
-  allreg:
-    type: text 
-    initial_value: ""
-  reg1:
-    type: text 
-    initial_value: ""
-  reg2:
-    type: text
-    initial_value: ""
-  closure:
-    type: text
-    initial_value: ""
-
+- utter_did_that_help
+- utter_greet
+- utter_happy
 entities:
 - PERSON
-- size
+- allreg
+- amount
+- closure
+- count
 - field
 - order
-- count
-- amount
+- refrence_time
+- reg1
+- reg2
+- size
 - time
 - time1
 - time2
-- refrence_time
-- allreg
-- reg1
-- reg2
-- closure
-
+intents:
+- help
+- stop
+- greet
+- bye
+- affirm
+- deny
+slots:
+  PERSON:
+    initial_value: ''
+    type: text
+  allreg:
+    initial_value: ''
+    type: text
+  amount:
+    initial_value: ''
+    type: text
+  closure:
+    initial_value: ''
+    type: text
+  count:
+    initial_value: ''
+    type: text
+  field:
+    initial_value: ''
+    type: text
+  order:
+    initial_value: ''
+    type: text
+  refrence_time:
+    initial_value: ''
+    type: text
+  reg1:
+    initial_value: ''
+    type: text
+  reg2:
+    initial_value: ''
+    type: text
+  size:
+    initial_value: ''
+    type: text
+  time:
+    initial_value: ''
+    type: text
+  time1:
+    initial_value: ''
+    type: text
+  time2:
+    initial_value: ''
+    type: text
 
 templates:
-  utter_greet:
-  - text: "Hey!\nHow can I help you?"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  # utter_ask_help:
-  # - text: "How can I help you?"
-
   utter_anything_else:
   - text: No worries. Is there anything else I can help you with?
   - text: No worries. Let me know if there is anything else I can help you with
-
-  utter_happy:
-  - text: "Great carry on!"
-
+  utter_ask_help:
+  - text: How can I help you?
   utter_bye:
-  - text: "Bye"
-
+  - text: Bye
   utter_default:
   - text: I am not sure what you're aiming for
   - text: I am sorry but I am not able to get you.
   - text: My appologies but I am not able to get you
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_greet:
+  - text: "Hey!\nHow can I help you?"
+  utter_happy:
+  - text: Great carry on!
