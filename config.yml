@@ -14,6 +14,11 @@ pipeline:
   - name: "SpacyEntityExtractor"
   - name: "EntitySynonymMapper"
   - name: "SklearnIntentClassifier"
+  - name: "DucklingHTTPExtractor"
+    url: "https://d9293ff2.ngrok.io/"
+    dimensions: ["time", "number"]
+    locale: "en_IN"
+    timezone: "Asia/Kolkata"
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
