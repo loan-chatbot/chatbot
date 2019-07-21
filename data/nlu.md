@@ -11,6 +11,7 @@
 - yes yes yes
 - definitely
 - yes, it did
+- yes
 
 ## intent:bye
 - Bye
@@ -39,15 +40,17 @@
 - no way
 - not really
 - nope
+- Nah
+- nay
+- no
 
 ## intent:greet
 - Hi
 - Hey
-- hey
+- heyy
 - Hi bot
 - Hey bot
 - Hello
-- hi
 - Good morning
 - hi again
 - hi folks
@@ -62,8 +65,7 @@
 - what are you?
 - what's up
 - how do you do?
-- heyy
-- hey
+- hi
 
 ## intent:help
 - Get me [total loans](count) disbursed in [last month](time)
@@ -95,5 +97,4 @@
 - Who is the [top](order) performing [sales officer](field) for [Karnataka](reg1)
 - Get me [monthly](time) [sales performance](count) of [sales officer](field) [ABCD](PERSON)
 - get me [total npa](amount) as of [today](time)
-
-
+- get me [total npa](amount) as of [today](time)[today](time:2019-07-21T00:00:00.000+05:30)

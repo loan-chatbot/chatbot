@@ -26,11 +26,11 @@ entities:
 - time2
 intents:
 - help
-- stop
-- greet
-- bye
 - affirm
 - deny
+- greet
+- stop
+- bye
 slots:
   PERSON:
     initial_value: ''
@@ -74,7 +74,6 @@ slots:
   time2:
     initial_value: ''
     type: text
-
 templates:
   utter_anything_else:
   - text: No worries. Is there anything else I can help you with?
