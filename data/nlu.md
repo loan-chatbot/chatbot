@@ -68,33 +68,32 @@
 - hi
 
 ## intent:help
-- Get me [total loans](count) disbursed in [last month](time)
-- Get me [total loans](count) disbursed in [last quater](time)
-- Get me [total loans](count) disbursed in [last year](time)
-- Get me [total loans](count) disbursed in the [last month of last year](time)
-- Get me [total amount](amount) of loans disbursed in the [same month last year](time)
-- Get me [total loans](count) disbursed in the month of [january 2018](time)
-- What is the [total outflow](count) in [last 5 years](time)?
-- Compare [amount of loans](amount) disbursed in the [current](time1) [month](time) against [previous](time2) [month](time)
-- Compare [loans](count) disbursed in the [first 15 days](time1) against [last 15 days](time2) in the [previous month](time).
-- Compare the [loans](count) disbursed in the [all the quarters](time1) in the [previous year](time).
-- Compare the [quarterly](time1) [loan amounts](amount) disbursed in the [current year](time)
-- Is this [quarter](time1) [loan](count) performance better than [previous](time2) one?
-- Get me the total [active](refrence_time) [loans](count) of [this year](time)
-- Get me the total [active](refrence_time) [loans](count) of [25th of april this year](time)
-- Get me the total [live](refrence_time) [loans](count) between [April](time1) to [May](time2) of [this year](time)
-- How many [loans](count) created in the [last year](time) are still [active](refrence_time)?
-- What is the count of [live](refrence_time) [loans](count) as of [April 2019](time)?
-- Get me [total NPA](amount) as of [today](time)
-- How [many NPAs](count)  have be [foreclosed](closure) in the [last year](time)
-- How [many NPAs](count)  have be [foreclosed](closure) in the [last financial year](time)
-- Compare the [loans](count) performance between [all states](allreg)
-- Compare the [loans](count) performance between [karnataka](reg1) and [madhya pradesh](reg2)
-- Compare the [loans](count) performance between [madhya pradesh](reg1) and [maharashtra](reg2)
-- Compare the [loans](count) performance between [karnataka](reg1) and [maharashtra](reg2)
-- Which is the [top](order) performing [sales officer](field) for [last 6 months](time) based on [amount](count)
-- Which is the worst performing [sales officer](field) for [last 1year](time) based on [count](count)
+- Get me [total loans](type:count) [disbursed](payout) in [last month](time)
+- Get me [total loans](type:count) [disbursed](payout) in [last quater](time)
+- Get me [total loans](type:count) [disbursed](payout) in [last year](time)
+- Get me [total loans](type:count) [disbursed](payout) in the [last month of last year](time)
+- Get me [total amount](type:amount) of loans [disbursed](payout) in the [same month last year](time)
+- Get me [total loans](type:count) [disbursed](payout) in the month of [january 2018](time)
+- What is the [total outflow](type:count) in [last 5 years](time)?
+- Compare [amount of loans](type:amount) [disbursed](payout) in the [current month](time)[current month](time1:2018-07-23T00:00:00.000+05:30) against [previous month](time)[previous month](time2:2018-07-23T00:00:00.000+05:30)
+- Compare [loans](type:count) [disbursed](payout) in the [first 15 days](time1) against [last 15 days](time2) in the [previous month](time).
+- Compare the [loans](type:count) [disbursed](payout) in the [all the quarters](time1) in the [previous year](time).
+- Compare the [quarterly](time1) [loan amounts](type:amount) [disbursed](payout) in the [current year](time)
+- Is this [quarter](time1) [loan](type:count) performance better than [previous](time2) one?
+- Get me the total [active](refrence_time) [loans](type:count) of [this year](time:2018-07-23T00:00:00.000+05:30)
+- Get me the total [active](refrence_time) [loans](type:count) of [25th of april this year](time:2018-07-23T00:00:00.000+05:30)
+- Get me the total [live](refrence_time) [loans](type:count) between [April](time1:2018-07-23T00:00:00.000+05:30) to [May](time2:2018-07-23T00:00:00.000+05:30) of [this year](time:2018-07-23T00:00:00.000+05:30)
+- How many [loans](type:count) created in the [last year](time:2018-07-23T00:00:00.000+05:30) are still [active](refrence_time)?
+- What is the count of [live](refrence_time) [loans](type:count) as of [April 2019](time:2018-07-23T00:00:00.000+05:30)?
+- Get me [total NPA](type:amount) as of [today](time)
+- How [many NPAs](type:count)  have be [foreclosed](closure) in the [last year](time:2018-07-23T00:00:00.000+05:30)
+- How [many NPAs](type:count)  have be [foreclosed](closure) in the [last financial year](time:2018-07-23T00:00:00.000+05:30)
+- Compare the [loans](type:count) performance between [all states](allreg)
+- Compare the [loans](type:count) performance between [karnataka](reg1) and [madhya pradesh](reg2)
+- Compare the [loans](type:count) performance between [madhya pradesh](reg1) and [maharashtra](reg2)
+- Compare the [loans](type:count) performance between [karnataka](reg1) and [maharashtra](reg2)
+- Which is the [top](order) performing [sales officer](field) for [last 6 months](time) based on [amount](type:count)
+- Which is the worst performing [sales officer](field) for [last 1year](time) based on [count](type:count)
 - Who is the [top](order) performing [sales officer](field) for [Karnataka](reg1)
-- Get me [monthly](time) [sales performance](count) of [sales officer](field) [ABCD](PERSON)
-- get me [total npa](amount) as of [today](time)
-- get me [total npa](amount) as of [today](time)[today](time:2019-07-21T00:00:00.000+05:30)
+- Get me [monthly](time) [sales performance](type:count) of [sales officer](field) [ABCD](PERSON)
+- get me [total npa](type:amount) as of [today](time:2019-07-21T00:00:00.000+05:30)

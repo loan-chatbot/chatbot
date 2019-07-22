@@ -15,8 +15,7 @@ class ActionGetHelp(Action):
         size = tracker.get_slot('size') 
         field = tracker.get_slot('field')
         order = tracker.get_slot('order') 
-        count = tracker.get_slot('count') 
-        amount = tracker.get_slot('amount') 
+        typo = tracker.get_slot('type') 
         time = tracker.get_slot('time') 
         time1 = tracker.get_slot('time1') 
         time2 = tracker.get_slot('time2') 
@@ -26,14 +25,14 @@ class ActionGetHelp(Action):
         reg2 = tracker.get_slot('reg2') 
         closure=tracker.get_slot('closure')
         person=tracker.get_slot('PERSON')
+        payout=tracker.get_slot('payout')
 
 
-        message = "\nSize: " + size + "\nField: " + field + "\nOrder: " + order + "\nCount:  " + count + "\nAmount: "+ amount + "\nTime: " + time + "\nTime1: " + time1 + "\nTime2: " + time2 + "\nRefrence time: " + refrence_time +"\nAll Reg: " + allreg + "\nReg1: " + reg1 + "\nReg2: " + reg2 +"\nClosure: " + closure +"\nPerson:" + person  
+        message = "\nSize: " + size + "\nField: " + field + "\nOrder: " + order + "\ntypo:  " + typo + "\nTime: " + time + "\nTime1: " + time1 + "\nTime2: " + time2 +"\nPayout: " + payout+"\nRefrence time: " + refrence_time +"\nAll Reg: " + allreg + "\nReg1: " + reg1 + "\nReg2: " + reg2 +"\nClosure: " + closure +"\nPerson:" + person  
         dispatcher.utter_message(message)
 
         pattern= re.compile(r'\s+')
-        amount=re.sub(pattern,'',amount)
-        count=re.sub(pattern,'',count)
+        typo=re.sub(pattern,'',typo)
         time=re.sub(pattern,'',time)
         time1=re.sub(pattern,'',time1)
         time2=re.sub(pattern,'',time2)
@@ -45,10 +44,8 @@ class ActionGetHelp(Action):
             field=field.lower()
         if((order.isalpha()) == True):
            order=order.lower()
-        if((count.isalpha()) == True):
-           count= count.lower()
-        if((amount.isalpha()) == True):
-           amount=amount.lower()
+        if((typo.isalpha()) == True):
+            typo= typo.lower()
         if((time.isalpha()) == True):
            time= time.lower()
         if((time1.isalpha()) == True):
@@ -71,29 +68,22 @@ class ActionGetHelp(Action):
         
                 
 
-        if(count!="" or amount!="" and time!=""):
-            if(("npa" in amount) or ("npa" in count) or ("npas" in count) or ("npas") in amount):
-                if(closure=="foreclosed"):
-                    dispatcher.utter_message("call getNPAForeclosed(type:"+count+","+time+")")
-                else:
-                    dispatcher.utter_message("call getNPA(type:"+amount+","+time+")")
-            elif(amount!="" and time!="" and refrence_time=="" and time1=="" and time2=="" and field==""):
-                dispatcher.utter_message("call getTimeBasedLoanDisbursed(type:"+amount+","+time+")")
-            elif(count!="" and time!="" and refrence_time=="" and time1=="" and time2=="" and field==""):
-                dispatcher.utter_message("call getTimeBasedLoanDisbursed(type:"+count+","+time+")")
+        if(typo!="" and time!=""):
+            if(closure=="foreclosed"):
+                dispatcher.utter_message("call getNPAForeclosed(type:"+typo+","+time+")")
+            elif(("disbursed" in payout) and time!="" and refrence_time=="" and time1=="" and time2=="" and field==""):
+                dispatcher.utter_message("call getTimeBasedLoanDisbursed(type:"+typo+","+time+")")
 
 
         if(refrence_time!=""):
-            if(count!=""):
-                dispatcher.utter_message("call getLiveLoans(type:"+count+",refrence_time:"+refrence_time+","+time+")")
-            elif(amount!=""):
-                dispatcher.utter_message("call getLiveLoans(type:"+amount+",refrence_time:"+refrence_time+","+time+")")
+            if(typo!=""):
+                dispatcher.utter_message("call getLiveLoans(type:"+typo+",refrence_time:"+refrence_time+","+time+")")
+        
 
         if(time1!="" or time2!=""):
-            if(count!=""):
-                dispatcher.utter_message("call timeBasedCompareLoans(type:"+count+",refrence_time:"+refrence_time+","+time+")")
-            elif(amount!=""):
-                dispatcher.utter_message("call timeBasedCompareLoans(type:"+amount+",refrence_time:"+refrence_time+","+time+")")
+            if(typo!=""):
+                dispatcher.utter_message("call timeBasedCompareLoans(type:"+typo+",refrence_time:"+refrence_time+","+time+")")
+    
             
         if(field!=""):
             if(allreg!=""):
@@ -107,8 +97,6 @@ class ActionGetHelp(Action):
             elif(allreg!=""):
                 dispatcher.utter_message("call getRegionInfo(order:"+order+",region:"+allreg+","+time+")")
 
-        if("month" in time and "performance" in count and person!=""):
-            dispatcher.utter_message("call getMonthlySalesPerformance(Type:"+count+","+field+":"+ person+","+time+")")
               
         return []
         

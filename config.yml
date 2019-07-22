@@ -15,7 +15,7 @@ pipeline:
   - name: "EntitySynonymMapper"
   - name: "SklearnIntentClassifier"
   - name: "DucklingHTTPExtractor"
-    url: "http://duckling:8000"
+    url: "http://ca808a3a.ngrok.io"
     dimensions: ["time", "number"]
     locale: "en_IN"
     timezone: "Asia/Kolkata"

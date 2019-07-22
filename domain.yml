@@ -2,6 +2,7 @@
 ---
 actions:
 - action_get_help
+- action_slot_reset
 - utter_anything_else
 - utter_ask_help
 - utter_bye
@@ -12,9 +13,9 @@ actions:
 entities:
 - PERSON
 - allreg
-- amount
+- type
 - closure
-- count
+- payout
 - field
 - order
 - refrence_time
@@ -35,16 +36,16 @@ slots:
   PERSON:
     initial_value: ''
     type: text
+  payout:
+    initial_value: ''
+    type: text
   allreg:
     initial_value: ''
     type: text
-  amount:
+  type:
     initial_value: ''
     type: text
   closure:
-    initial_value: ''
-    type: text
-  count:
     initial_value: ''
     type: text
   field:
@@ -89,6 +90,6 @@ templates:
   utter_did_that_help:
   - text: Did that help you?
   utter_greet:
-  - text: "Hey!\nHow can I help you?"
+  - text: "Hey!"
   utter_happy:
   - text: Great carry on!
