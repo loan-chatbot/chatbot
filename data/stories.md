@@ -1,323 +1,71 @@
-## 1 happy path
+## getNPA count path
 * greet
     - utter_greet
     - utter_ask_help
-* help
-    - action_get_help
+* helpNPA{"type": "count", "time": "2019-07-24T00:00:00.000+05:30"}
+    - slot{"time": "2019-07-24T00:00:00.000+05:30"}
+    - slot{"type": "count"}
+    - action_get_getNPA
     - utter_did_that_help
-* affirm
-    - utter_anything_else
-* deny
-    - utter_happy
-* bye
-    - utter_bye
+> check_asked_help
 
-## 2 happy path
+## getNPA amount path
 * greet
     - utter_greet
     - utter_ask_help
-* help
-    - action_get_help
+* helpNPA{"type": "amount", "time": "2019-07-24T00:00:00.000+05:30"}
+    - slot{"time": "2019-07-24T00:00:00.000+05:30"}
+    - slot{"type": "amount"}
+    - action_get_getNPA
     - utter_did_that_help
-* affirm
-    - utter_anything_else
-* affirm
-    - action_slot_reset
-    - utter_ask_help
-* help
-    - action_get_help
-    - utter_did_that_help
-* affirm
-    - utter_anything_else
-* deny
-    - utter_happy
-    - utter_bye
+> check_asked_help
 
-## 1 sad path
+## getNPAForeclosed count path
 * greet
     - utter_greet
     - utter_ask_help
-* help
-    - action_get_help
+* helpNPAForeclosed{"type": "count", "closure": "foreclosed", "time": "2019-07-24T00:00:00.000+05:30"}
+    - slot{"type": "count"}
+    - slot{"closure": "foreclosed"}
+    - slot{"time": "2019-07-24T00:00:00.000+05:30"}
+    - action_get_getNPAForeclosed
     - utter_did_that_help
-* deny
-    - action_slot_reset
-    - utter_ask_help
-* help
-    - action_get_help
-    - utter_did_that_help
-* affirm
-    - utter_anything_else
-* deny
-    - utter_happy
-* bye
-    - utter_bye
+> check_asked_help
 
-## 2 sad path
+## getNPAForeclosed amount sad path
 * greet
     - utter_greet
     - utter_ask_help
-* help
-    - action_get_help
+* helpNPAForeclosed{"type": "amount", "closure": "foreclosed", "time": "2019-07-24T00:00:00.000+05:30"}
+    - slot{"type": "amount"}
+    - slot{"closure": "foreclosed"}
+    - slot{"time": "2019-07-24T00:00:00.000+05:30"}
+    - action_get_getNPAForeclosed
     - utter_did_that_help
-* deny
-    - action_slot_reset
-    - utter_ask_help
-* help
-    - action_get_help
-    - utter_did_that_help
-* affirm
-    - utter_anything_else
-* affirm
-    - action_slot_reset
-    - utter_ask_help
-* help
-    - action_get_help
-    - utter_did_that_help
+> check_asked_help
+
+## checkpoint affirm path
+> check_asked_help
 * affirm
     - utter_anything_else
 * deny
     - utter_happy
-* bye
     - utter_bye
 
-## happy help path
-* help
-    - action_get_help
-    - utter_did_that_help
-* affirm
-    - utter_anything_else
-* deny
-    - utter_happy
-* bye
-    - utter_bye
-
-## sad help path
-* help
-    - action_get_help
-    - utter_did_that_help
+## checkpoint 1 deny path
+> check_asked_help
 * deny
     - action_slot_reset
     - utter_ask_help
-* help
-    - action_get_help
-    - utter_did_that_help
+
+## checkpoint 2 deny path
+> check_asked_help
 * affirm
     - utter_anything_else
-* deny
-    - utter_happy
-* bye
-    - utter_bye
+* affirm
+    - action_slot_reset
+    - utter_ask_help
 
 ## bye path
 * bye
     - utter_bye
-
-## total npa happy path
-* greet
-    - utter_greet
-    - utter_ask_help
-* help{"type": "total npa", "time": "2019-07-22T00:00:00.000+05:30"}
-    - slot{"type": "total npa"}
-    - slot{"time": "2019-07-22T00:00:00.000+05:30"}
-    - action_get_help
-    - utter_did_that_help
-* affirm
-    - utter_anything_else
-* deny
-    - utter_happy
-    - utter_bye
-
-## total npa sad path
-* greet
-    - utter_greet
-    - utter_ask_help
-* help{"type": "total npa", "time": "2019-07-22T00:00:00.000+05:30"}
-    - slot{"type": "total npa"}
-    - slot{"time": "2019-07-22T00:00:00.000+05:30"}
-    - action_get_help
-    - utter_did_that_help
-* deny
-    - action_slot_reset
-    - utter_ask_help
-* help{"type": "total npa", "time": "2019-07-22T00:00:00.000+05:30"}
-    - slot{"type": "total npa"}
-    - slot{"time": "2019-07-22T00:00:00.000+05:30"}
-    - action_get_help
-    - utter_did_that_help
-* affirm
-    - utter_anything_else
-* deny
-    - utter_happy
-    - utter_bye
-
-## total npa foreclosed happy path
-* greet
-    - utter_greet
-    - utter_ask_help
-* help{"type": "many NPAs", "closure": "foreclosed", "time": "2018-07-23T00:00:00.000+05:30"}
-    - slot{"type": "many NPAs"}
-    - slot{"closure": "foreclosed"}
-    - slot{"time": "2019-07-23T00:00:00.000+05:30"}
-    - action_get_help
-    - utter_did_that_help
-* affirm
-    - utter_anything_else
-* deny
-    - utter_happy
-    - utter_bye
-
-## total npa foreclosed sad path
-* greet
-    - utter_greet
-    - utter_ask_help
-* help{"type": "many NPAs", "closure": "foreclosed", "time": "2018-07-23T00:00:00.000+05:30"}
-    - slot{"type": "many NPAs"}
-    - slot{"closure": "foreclosed"}
-    - slot{"time": "2019-07-23T00:00:00.000+05:30"}
-    - action_get_help
-    - utter_did_that_help
-* deny
-    - action_slot_reset
-    - utter_ask_help
-* help{"type": "many NPAs", "closure": "foreclosed", "time": "2019-07-23T00:00:00.000+05:30"}
-    - slot{"type": "many NPAs"}
-    - slot{"closure": "foreclosed"}
-    - slot{"time": "2019-07-23T00:00:00.000+05:30"}
-    - action_get_help
-    - utter_did_that_help
-* affirm
-    - utter_anything_else
-* deny
-    - utter_happy
-    - utter_bye
-
-## timeBasedLoanDisbursed happy path
-* greet
-    - utter_greet
-    - utter_ask_help
-* help{"type": "total loans", "time": "2018-06-22T00:00:00.000+05:30"}
-    - slot{"type": "total loans"}
-    - slot{"time": "2019-06-22T00:00:00.000+05:30"}
-    - action_get_help
-    - utter_did_that_help
-* affirm
-    - utter_anything_else
-* deny
-    - utter_happy
-    - utter_bye
-
-## timeBasedLoanDisbursed sad path
-* greet
-    - utter_greet
-    - utter_ask_help
-* help{"type": "total loans", "time": "2018-06-22T00:00:00.000+05:30"}
-    - slot{"type": "total loans"}
-    - slot{"time": "2019-07-23T00:00:00.000+05:30"}
-    - action_get_help
-    - utter_did_that_help
-* deny
-    - action_slot_reset
-    - utter_ask_help
-* help{"type": "total loans", "time": "2018-06-22T00:00:00.000+05:30"}
-    - slot{"type": "total loans"}
-    - slot{"time": "2019-07-23T00:00:00.000+05:30"}
-    - action_get_help
-    - utter_did_that_help
-* affirm
-    - utter_anything_else
-* deny
-    - utter_happy
-    - utter_bye
-
-## timeBasedcompareloan happy path
-* greet
-    - utter_greet
-    - utter_ask_help
-* help{"type": "total loans","payout": "disbursed","time1": "2018-06-22T00:00:00.000+05:30","time2": "2018-06-22T00:00:00.000+05:30"}
-    - slot{"type": "total loans"}
-    - slot{"time1": "2019-06-22T00:00:00.000+05:30"}
-    - slot{"time2": "2019-06-22T00:00:00.000+05:30"}
-    - slot{"payout": "disbursed"}
-    - action_get_help
-    - utter_did_that_help
-* affirm
-    - utter_anything_else
-* deny
-    - utter_happy
-    - utter_bye
-
-## timeBasedcompareloan sad path
-* greet
-    - utter_greet
-    - utter_ask_help
-* help{"type": "total loans","payout": "disbursed","time1": "2018-06-22T00:00:00.000+05:30","time2": "2018-06-22T00:00:00.000+05:30"}
-    - slot{"type": "total loans"}
-    - slot{"time1": "2019-06-22T00:00:00.000+05:30"}
-    - slot{"time2": "2019-06-22T00:00:00.000+05:30"}
-    - slot{"payout": "disbursed"}
-    - action_get_help
-    - utter_did_that_help
-* deny
-    - action_slot_reset
-    - utter_ask_help
-* help{"type": "total loans","payout": "disbursed","time1": "2018-06-22T00:00:00.000+05:30","time2": "2018-06-22T00:00:00.000+05:30"}
-    - slot{"type": "total loans"}
-    - slot{"time1": "2019-06-22T00:00:00.000+05:30"}
-    - slot{"time2": "2019-06-22T00:00:00.000+05:30"}
-    - slot{"payout": "disbursed"}
-    - action_get_help
-    - utter_did_that_help
-* affirm
-    - utter_anything_else
-* deny
-    - utter_happy
-    - utter_bye
-
-## getliveloans happy path
-* greet
-    - utter_greet
-    - utter_ask_help
-* help{"type": "loans","active": "refrence_time" ,"time1": "2018-06-22T00:00:00.000+05:30","time2": "2018-06-22T00:00:00.000+05:30","time": "2018-07-23T00:00:00.000+05:30"}
-    - slot{"type": "total loans"}
-    - slot{"time1": "2019-06-22T00:00:00.000+05:30"}
-    - slot{"time2": "2019-06-22T00:00:00.000+05:30"}
-    - slot{"active": "refrence_time"}
-    - slot{"time": "2018-07-23T00:00:00.000+05:30"}
-    - action_get_help
-    - utter_did_that_help
-* affirm
-    - utter_anything_else
-* deny
-    - utter_happy
-    - utter_bye
-
-## getliveloans sad path
-* greet
-    - utter_greet
-    - utter_ask_help
-* help{"type": "loans","active": "refrence_time" ,"time1": "2018-06-22T00:00:00.000+05:30","time2": "2018-06-22T00:00:00.000+05:30","time": "2018-07-23T00:00:00.000+05:30"}
-    - slot{"type": "total loans"}
-    - slot{"time1": "2019-06-22T00:00:00.000+05:30"}
-    - slot{"time2": "2019-06-22T00:00:00.000+05:30"}
-    - slot{"active": "refrence_time"}
-    - slot{"time": "2018-07-23T00:00:00.000+05:30"}
-    - action_get_help
-    - utter_did_that_help
-* deny
-    - action_slot_reset
-    - utter_ask_help
-* help{"type": "loans","active": "refrence_time" ,"time1": "2018-06-22T00:00:00.000+05:30","time2": "2018-06-22T00:00:00.000+05:30","time": "2018-07-23T00:00:00.000+05:30"}
-    - slot{"type": "total loans"}
-    - slot{"time1": "2019-06-22T00:00:00.000+05:30"}
-    - slot{"time2": "2019-06-22T00:00:00.000+05:30"}
-    - slot{"active": "refrence_time"}
-    - slot{"time": "2018-07-23T00:00:00.000+05:30"}
-    - action_get_help
-    - utter_did_that_help
-* affirm
-    - utter_anything_else
-* deny
-    - utter_happy
-    - utter_bye
-

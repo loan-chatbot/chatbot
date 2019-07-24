@@ -1,7 +1,8 @@
 %YAML 1.1
 ---
 actions:
-- action_get_help
+- action_get_getNPA
+- action_get_getNPAForeclosed
 - action_slot_reset
 - utter_anything_else
 - utter_ask_help
@@ -11,68 +12,25 @@ actions:
 - utter_greet
 - utter_happy
 entities:
-- PERSON
-- allreg
-- type
 - closure
-- payout
-- field
-- order
-- refrence_time
-- reg1
-- reg2
-- size
 - time
-- time1
-- time2
+- type
 intents:
-- help
-- affirm
 - deny
+- helpNPA
 - greet
+- affirm
+- helpNPAForeclosed
 - stop
 - bye
 slots:
-  PERSON:
-    initial_value: ''
-    type: text
-  payout:
-    initial_value: ''
-    type: text
-  allreg:
-    initial_value: ''
-    type: text
-  type:
-    initial_value: ''
-    type: text
   closure:
-    initial_value: ''
-    type: text
-  field:
-    initial_value: ''
-    type: text
-  order:
-    initial_value: ''
-    type: text
-  refrence_time:
-    initial_value: ''
-    type: text
-  reg1:
-    initial_value: ''
-    type: text
-  reg2:
-    initial_value: ''
-    type: text
-  size:
     initial_value: ''
     type: text
   time:
     initial_value: ''
     type: text
-  time1:
-    initial_value: ''
-    type: text
-  time2:
+  type:
     initial_value: ''
     type: text
 templates:
@@ -90,6 +48,6 @@ templates:
   utter_did_that_help:
   - text: Did that help you?
   utter_greet:
-  - text: "Hey!"
+  - text: Hey!
   utter_happy:
   - text: Great carry on!

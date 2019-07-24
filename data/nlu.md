@@ -12,6 +12,7 @@
 - definitely
 - yes, it did
 - yes
+- yes
 
 ## intent:bye
 - Bye
@@ -43,6 +44,7 @@
 - Nah
 - nay
 - no
+- no
 
 ## intent:greet
 - Hi
@@ -66,34 +68,36 @@
 - what's up
 - how do you do?
 - hi
+- hey
 
-## intent:help
-- Get me [total loans](type:count) [disbursed](payout) in [last month](time)
-- Get me [total loans](type:count) [disbursed](payout) in [last quater](time)
-- Get me [total loans](type:count) [disbursed](payout) in [last year](time)
-- Get me [total loans](type:count) [disbursed](payout) in the [last month of last year](time)
-- Get me [total amount](type:amount) of loans [disbursed](payout) in the [same month last year](time)
-- Get me [total loans](type:count) [disbursed](payout) in the month of [january 2018](time)
-- What is the [total outflow](type:count) in [last 5 years](time)?
-- Compare [amount of loans](type:amount) [disbursed](payout) in the [current month](time)[current month](time1:2018-07-23T00:00:00.000+05:30) against [previous month](time)[previous month](time2:2018-07-23T00:00:00.000+05:30)
-- Compare [loans](type:count) [disbursed](payout) in the [first 15 days](time1) against [last 15 days](time2) in the [previous month](time).
-- Compare the [loans](type:count) [disbursed](payout) in the [all the quarters](time1) in the [previous year](time).
-- Compare the [quarterly](time1) [loan amounts](type:amount) [disbursed](payout) in the [current year](time)
-- Is this [quarter](time1) [loan](type:count) performance better than [previous](time2) one?
-- Get me the total [active](refrence_time) [loans](type:count) of [this year](time:2018-07-23T00:00:00.000+05:30)
-- Get me the total [active](refrence_time) [loans](type:count) of [25th of april this year](time:2018-07-23T00:00:00.000+05:30)
-- Get me the total [live](refrence_time) [loans](type:count) between [April](time1:2018-07-23T00:00:00.000+05:30) to [May](time2:2018-07-23T00:00:00.000+05:30) of [this year](time:2018-07-23T00:00:00.000+05:30)
-- How many [loans](type:count) created in the [last year](time:2018-07-23T00:00:00.000+05:30) are still [active](refrence_time)?
-- What is the count of [live](refrence_time) [loans](type:count) as of [April 2019](time:2018-07-23T00:00:00.000+05:30)?
-- Get me [total NPA](type:amount) as of [today](time)
-- How [many NPAs](type:count)  have be [foreclosed](closure) in the [last year](time:2018-07-23T00:00:00.000+05:30)
-- How [many NPAs](type:count)  have be [foreclosed](closure) in the [last financial year](time:2018-07-23T00:00:00.000+05:30)
-- Compare the [loans](type:count) performance between [all states](allreg)
-- Compare the [loans](type:count) performance between [karnataka](reg1) and [madhya pradesh](reg2)
-- Compare the [loans](type:count) performance between [madhya pradesh](reg1) and [maharashtra](reg2)
-- Compare the [loans](type:count) performance between [karnataka](reg1) and [maharashtra](reg2)
-- Which is the [top](order) performing [sales officer](field) for [last 6 months](time) based on [amount](type:count)
-- Which is the worst performing [sales officer](field) for [last 1year](time) based on [count](type:count)
-- Who is the [top](order) performing [sales officer](field) for [Karnataka](reg1)
-- Get me [monthly](time) [sales performance](type:count) of [sales officer](field) [ABCD](PERSON)
-- get me [total npa](type:amount) as of [today](time:2019-07-21T00:00:00.000+05:30)
+## intent:helpNPA
+- get me [total npa](type:count) as of [today](time:2019-07-24T00:00:00.000+05:30)
+- get me [total npa](type:count) as of [yesterday](time:2019-07-24T00:00:00.000+05:30)
+- get me [total npa](type:count) as of [last month](time:2019-07-24T00:00:00.000+05:30)
+- get me [total amount of npa](type:amount) as of [last week](time:2019-07-24T00:00:00.000+05:30)
+- get me [total amount of npa](type:amount) as of [today](time:2019-07-24T00:00:00.000+05:30)
+
+## intent:helpNPAForeclosed
+- How [many NPAs](type:count) have be [foreclosed](closure) in the [last year](time:2019-07-24T00:00:00.000+05:30)
+- How [many NPAs](type:count) have be [foreclosed](closure) in the [last financial year](time:2019-07-24T00:00:00.000+05:30)
+- How [many npas](type:count) have been [foreclosed](closure) [today](time:2019-07-24T00:00:00.000+05:30)
+- How [much NPAs](type:amount) have be [foreclosed](closure) in the [last month](time:2019-07-24T00:00:00.000+05:30)
+- How [much npas](type:amount) have been [foreclosed](closure) [yesterday](time:2019-07-24T00:00:00.000+05:30)
+
+## synonym:2019-07-24T00:00:00.000+05:30
+- today
+- last week
+- last year
+- last financial year
+- last month
+- yesterday
+
+## synonym:amount
+- total amount of npa
+- much NPAs
+- much npas
+
+## synonym:count
+- total npa
+- many NPAs
+- many npas

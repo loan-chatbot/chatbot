@@ -7,22 +7,29 @@ pipeline:
   - name: "SpacyFeaturizer"
   - name: "RegexFeaturizer"
   - name: "CRFEntityExtractor"
-    features: [
-    ["low", "title", "upper"],
-    ["bias", "low", "prefix5", "prefix2", "suffix5", "suffix3", "suffix2", "upper", "title", "digit", "pattern", "pos", "pos2"],
-    ["low", "title", "upper"]]
   - name: "SpacyEntityExtractor"
-  - name: "EntitySynonymMapper"
-  - name: "SklearnIntentClassifier"
   - name: "DucklingHTTPExtractor"
-    url: "http://ca808a3a.ngrok.io"
-    dimensions: ["time", "number"]
+    url: "http://d8aea799.ngrok.io"
+    dimensions: ["time"]
     locale: "en_IN"
     timezone: "Asia/Kolkata"
+  - name: "EntitySynonymMapper"
+  - name: "SklearnIntentClassifier"
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
 policies:
   - name: MemoizationPolicy
+    max_history: 5
   - name: KerasPolicy
+    epochs: 200
+    featurizer:
+    - name: MaxHistoryTrackerFeaturizer
+      max_history: 5
+      state_featurizer:
+        - name: BinarySingleStateFeaturizer
+  - name: "FallbackPolicy"
+    nlu_threshold: 0.2
+    core_threshold: 0.2
+    fallback_action_name: 'action_default_fallback'
   - name: MappingPolicy
