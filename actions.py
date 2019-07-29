@@ -5,6 +5,7 @@ from rasa.core.events import AllSlotsReset
 from rasa.core.events import Restarted
 import re
 
+
 class ActionGetNPA(Action):
 
     def name(self):
@@ -14,9 +15,10 @@ class ActionGetNPA(Action):
         typo = tracker.get_slot('type')
         time = tracker.get_slot('time')
         dispatcher.utter_message(
-                    "call getNPA(type:"+typo+","+time+")")
+            "call getNPA(type:"+typo+", time_string:"+time+")")
 
         return []
+
 
 class ActionGetNPAForeclosed(Action):
 
@@ -27,9 +29,69 @@ class ActionGetNPAForeclosed(Action):
         typo = tracker.get_slot('type')
         time = tracker.get_slot('time')
         dispatcher.utter_message(
-                    "call getNPAForeclosed(type:"+typo+","+time+")")
+            "call getNPAForeclosed(type:"+typo+", time_string:"+time+")")
 
         return []
+
+
+class ActionGetTimeBasedLoanDisbursed(Action):
+
+    def name(self):
+        return "action_get_getTimeBasedLoanDisbursed"
+
+    def run(self, dispatcher, tracker, domain):
+        typo = tracker.get_slot('type')
+        time = tracker.get_slot('time')
+        dispatcher.utter_message(
+            "call getTimeBasedLoanDisbursed(type:"+typo+", time_string:"+time+")")
+
+        return []
+
+
+class ActionGetRegionInfo(Action):
+
+    def name(self):
+        return "action_get_getRegionInfo"
+
+    def run(self, dispatcher, tracker, domain):
+        typo = tracker.get_slot('type')
+        region = tracker.get_slot('region')
+        time = tracker.get_slot('time')
+        dispatcher.utter_message(
+            "call getRegionInfo(type:"+typo+", region:"+region+", time_string:"+time+")")
+        return []
+
+
+class ActionGetSalesPerformance(Action):
+
+    def name(self):
+        return "action_get_getSalesPerformance"
+
+    def run(self, dispatcher, tracker, domain):
+        typo = tracker.get_slot('type')
+        region = tracker.get_slot('region')
+        time = tracker.get_slot('time')
+        order = tracker.get_slot('order')
+        dispatcher.utter_message(
+            "call getSalesPerformance(type:"+typo+", region:"+region+", time_string:"+time + ", order:"+order+")")
+
+        return []
+
+
+class ActionGetMonthlySalesPerformance(Action):
+
+    def name(self):
+        return "action_get_getMonthlySalesPerformance"
+
+    def run(self, dispatcher, tracker, domain):
+        typo = tracker.get_slot('type')
+        time = tracker.get_slot('time')
+        person = tracker.get_slot('PERSON')
+        dispatcher.utter_message(
+            "call getMonthlySalesPerformance(type:"+typo+", time_string:"+time + ", PERSON:"+person+")")
+
+        return []
+
 
 class ActionRestarted(Action):
     def name(self):
@@ -37,6 +99,7 @@ class ActionRestarted(Action):
 
     def run(self, dispatcher, tracker, domain):
         return[Restarted()]
+
 
 class ActionSlotReset(Action):
     def name(self):

@@ -9,7 +9,7 @@ pipeline:
   - name: "CRFEntityExtractor"
   - name: "SpacyEntityExtractor"
   - name: "DucklingHTTPExtractor"
-    url: "http://d8aea799.ngrok.io"
+    url: "http://2259d403.ngrok.io"
     dimensions: ["time"]
     locale: "en_IN"
     timezone: "Asia/Kolkata"

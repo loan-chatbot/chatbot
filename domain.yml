@@ -3,6 +3,10 @@
 actions:
 - action_get_getNPA
 - action_get_getNPAForeclosed
+- action_get_getTimeBasedLoanDisbursed
+- action_get_getRegionInfo
+- action_get_getSalesPerformance
+- action_get_getMonthlySalesPerformance
 - action_slot_reset
 - utter_anything_else
 - utter_ask_help
@@ -15,12 +19,20 @@ entities:
 - closure
 - time
 - type
+- flag
+- region
+- order
+- PERSON
 intents:
 - deny
 - helpNPA
 - greet
 - affirm
 - helpNPAForeclosed
+- helpTimeBasedLoanDisbursed
+- helpRegionInfo
+- helpSalesPerformance
+- helpMonthlySalesPerformance
 - stop
 - bye
 slots:
@@ -31,6 +43,18 @@ slots:
     initial_value: ''
     type: text
   type:
+    initial_value: 'count'
+    type: text
+  flag:
+    initial_value: ''
+    type: text
+  region:
+    initial_value: 'all'
+    type: text
+  order:
+    initial_value: ''
+    type: text
+  PERSON:
     initial_value: ''
     type: text
 templates:

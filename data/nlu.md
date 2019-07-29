@@ -84,20 +84,54 @@
 - How [much NPAs](type:amount) have be [foreclosed](closure) in the [last month](time:2019-07-24T00:00:00.000+05:30)
 - How [much npas](type:amount) have been [foreclosed](closure) [yesterday](time:2019-07-24T00:00:00.000+05:30)
 
+## intent:helpTimeBasedLoanDisbursed
+- get me [total loans](type:count) [disbursed](flag) in [last month](time:2019-07-24T00:00:00.000+05:30)
+- get me [total loans](type:count) [disbursed](flag) in the [last month of last year](time:2019-07-24T00:00:00.000+05:30)
+- get me [total amount of loans](type:amount) [disbursed](flag) in the [same month last year](time:2019-07-24T00:00:00.000+05:30)
+- get me [total loans](type:count) [disbursed](flag) in the month of [january 2018](time:2019-07-24T00:00:00.000+05:30)
+- get me [total amount of loans](type:amount) [disbursed](flag) in [last quarter](time:2019-07-24T00:00:00.000+05:30)
+
+## intent:helpRegionInfo
+- compare the [loans](type:count) performance between [different regions](region:all) in [last 6 months](time:2019-07-24T00:00:00.000+05:30)
+- get the [amount of loans](type:amount) performance in [Karnataka](region:Karnataka) in [last month](time:2019-07-24T00:00:00.000+05:30)
+- get the [loans](type:count) performance in [Maharashtra](region:Maharashtra) as of [today](time:2019-07-24T00:00:00.000+05:30)
+- get the [amount of loans](type:amount) performance in [Madhya Pradesh](region:Madhya_Pradesh) in [last year](time:2019-07-24T00:00:00.000+05:30)
+- get the [amount of loans](type:amount) performance in [MP](region:MP) in [previous week](time:2019-07-24T00:00:00.000+05:30)
+- get me [loans](type:count) performance in [goa](region:goa) in [previous year](time:2019-07-24T00:00:00.000+05:30)
+
+## intent:helpSalesPerformance
+- Which is the [top](order:ascending) performing [sales](flag) officer for [last 6 months](time:2019-07-24T00:00:00.000+05:30) based on [amount](type:amount)?
+- Which is the [worst](order:descending) performing [sales](flag) officer for [last 1 year](time:2019-07-24T00:00:00.000+05:30) based on [count](type)?
+- Who is the [top](order:ascending) performing [sales](flag) officer for [Karnataka](region)?
+
+## intent:helpMonthlySalesPerformance
+- Get me [monthly](time) sales performance of sales officer [Krishnamurthy](PERSON)
+- Get me [yearly](time) sales performance of the sales officer [Pranav](PERSON)
+- Get me [quarterly](time) sales performance of sales officer [Adithya](PERSON)
+- show me [weekly](time) sales performance of sales officer [Balu](PERSON)
+
 ## synonym:2019-07-24T00:00:00.000+05:30
 - today
 - last week
 - last year
 - last financial year
 - last month
+- last quarter
 - yesterday
+- january 2018
 
 ## synonym:amount
 - total amount of npa
+- total amount of loans
+- total amount of loan
 - much NPAs
 - much npas
+- much npa
 
 ## synonym:count
 - total npa
+- total loans
+- total loan
 - many NPAs
 - many npas
+- many npa
