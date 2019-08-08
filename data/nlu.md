@@ -110,6 +110,12 @@
 - Get me [quarterly](time) sales performance of sales officer [Adithya](PERSON)
 - show me [weekly](time) sales performance of sales officer [Balu](PERSON)
 
+## intent:helpLiveLoans
+- Get me the total [live](ref_time:current) [loans](type:count) as of [last Tuesday](time)
+- Get me the total [live](ref_time:current) [loans](type:count) as of [last year](time)
+- How many [loans](type:count) created in the [last year](time) are still [active](ref_time:current)?
+- What is the [count](type:count) of [live](ref_time:current) loans as of [April 2019](time)?
+
 ## synonym:2019-07-24T00:00:00.000+05:30
 - today
 - last week
@@ -135,3 +141,5 @@
 - many NPAs
 - many npas
 - many npa
+- loan
+- loans
