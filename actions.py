@@ -92,6 +92,19 @@ class ActionGetMonthlySalesPerformance(Action):
 
         return []
 
+class ActionGetLiveLoans(Action):
+
+        def name(self):
+            return "action_get_getLiveLoans"
+    
+        def run(self, dispatcher, tracker, domain):
+            typo = tracker.get_slot('type')
+            time = tracker.get_slot('time')
+            ref_time = tracker.get_slot('ref_time')
+            dispatcher.utter_message(
+                "call getLiveLoans(type:"+typo+", time_string:"+time + ", refrence_time:"+ref_time+")")
+    
+            return []
 
 class ActionRestarted(Action):
     def name(self):
