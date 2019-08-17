@@ -15,7 +15,7 @@ class ActionGetNPA(Action):
         typo = tracker.get_slot('type')
         time = tracker.get_slot('time')
         dispatcher.utter_message(
-            "call getNPA(type:"+typo+", time_string:"+time+")")
+            "call getNPA(type:"+typo+", time_string:"+str(time)+")")
 
         return []
 
@@ -29,7 +29,7 @@ class ActionGetNPAForeclosed(Action):
         typo = tracker.get_slot('type')
         time = tracker.get_slot('time')
         dispatcher.utter_message(
-            "call getNPAForeclosed(type:"+typo+", time_string:"+time+")")
+            "call getNPAForeclosed(type:"+typo+", time_string:"+str(time)+")")
 
         return []
 
@@ -43,7 +43,7 @@ class ActionGetTimeBasedLoanDisbursed(Action):
         typo = tracker.get_slot('type')
         time = tracker.get_slot('time')
         dispatcher.utter_message(
-            "call getTimeBasedLoanDisbursed(type:"+typo+", time_string:"+time+")")
+            "call getTimeBasedLoanDisbursed(type:"+typo+", time_string:"+str(time)+")")
 
         return []
 
@@ -58,7 +58,7 @@ class ActionGetRegionInfo(Action):
         region = tracker.get_slot('region')
         time = tracker.get_slot('time')
         dispatcher.utter_message(
-            "call getRegionInfo(type:"+typo+", region:"+region+", time_string:"+time+")")
+            "call getRegionInfo(type:"+typo+", region:"+region+", time_string:"+str(time)+")")
         return []
 
 
@@ -73,7 +73,7 @@ class ActionGetSalesPerformance(Action):
         time = tracker.get_slot('time')
         order = tracker.get_slot('order')
         dispatcher.utter_message(
-            "call getSalesPerformance(type:"+typo+", region:"+region+", time_string:"+time + ", order:"+order+")")
+            "call getSalesPerformance(type:"+typo+", region:"+region+", time_string:"+str(time) + ", order:"+order+")")
 
         return []
 
@@ -88,7 +88,7 @@ class ActionGetMonthlySalesPerformance(Action):
         time = tracker.get_slot('time')
         person = tracker.get_slot('PERSON')
         dispatcher.utter_message(
-            "call getMonthlySalesPerformance(type:"+typo+", time_string:"+time + ", PERSON:"+person+")")
+            "call getMonthlySalesPerformance(type:"+typo+", time_string:"+str(time) + ", PERSON:"+person+")")
 
         return []
 
@@ -102,7 +102,7 @@ class ActionGetLiveLoans(Action):
             time = tracker.get_slot('time')
             ref_time = tracker.get_slot('ref_time')
             dispatcher.utter_message(
-                "call getLiveLoans(type:"+typo+", time_string:"+time + ", refrence_time:"+ref_time+")")
+                "call getLiveLoans(type:"+typo+", time_string:"+str(time) + ", refrence_time:"+ref_time+")")
     
             return []
 

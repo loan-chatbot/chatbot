@@ -72,10 +72,12 @@
 
 ## intent:helpNPA
 - get me [total npa](type:count) as of [today](time:2019-07-24T00:00:00.000+05:30)
-- get me [total npa](type:count) as of [yesterday](time:2019-07-24T00:00:00.000+05:30)
-- get me [total npa](type:count) as of [last month](time:2019-07-24T00:00:00.000+05:30)
-- get me [total amount of npa](type:amount) as of [last week](time:2019-07-24T00:00:00.000+05:30)
+- [total npa](type:count) as of [yesterday](time:2019-07-24T00:00:00.000+05:30)
+- give me [total npa](type:count) as of [last month](time:2019-07-24T00:00:00.000+05:30)
+- what is [total amount of npa](type:amount) as of [last week](time:2019-07-24T00:00:00.000+05:30)
+- tell me [total amount of npa](type:amount) as of [today](time:2019-07-24T00:00:00.000+05:30)
 - get me [total amount of npa](type:amount) as of [today](time:2019-07-24T00:00:00.000+05:30)
+- [total npa](type:count) [yesterday](time:2019-07-24T00:00:00.000+05:30)
 
 ## intent:helpNPAForeclosed
 - How [many NPAs](type:count) have be [foreclosed](closure) in the [last year](time:2019-07-24T00:00:00.000+05:30)
@@ -90,15 +92,19 @@
 - get me [total amount of loans](type:amount) [disbursed](flag) in the [same month last year](time:2019-07-24T00:00:00.000+05:30)
 - get me [total loans](type:count) [disbursed](flag) in the month of [january 2018](time:2019-07-24T00:00:00.000+05:30)
 - get me [total amount of loans](type:amount) [disbursed](flag) in [last quarter](time:2019-07-24T00:00:00.000+05:30)
+- give me [total amount of loans](type:amount) [disbursed](flag) in [last quarter](time:2019-07-24T00:00:00.000+05:30)
+- tell me [total loans](type:count) [disbursed](flag) in [last month](time:2019-07-24T00:00:00.000+05:30)
+- what is the [total loans](type:count) [disbursed](flag) in the [last month of last year](time:2019-07-24T00:00:00.000+05:30)
+
 
 ## intent:helpRegionInfo
 - compare the [loans](type:count) performance between [different regions](region:all) in [last 6 months](time:2019-07-24T00:00:00.000+05:30)
 - get the [amount of loans](type:amount) performance in [Karnataka](region:Karnataka) in [last month](time:2019-07-24T00:00:00.000+05:30)
 - get the [loans](type:count) performance in [Maharashtra](region:Maharashtra) as of [today](time:2019-07-24T00:00:00.000+05:30)
-- get the [amount of loans](type:amount) performance in [Madhya Pradesh](region:Madhya_Pradesh) in [last year](time:2019-07-24T00:00:00.000+05:30)
+- give the [amount of loans](type:amount) performance in [Madhya Pradesh](region:Madhya_Pradesh) in [last year](time:2019-07-24T00:00:00.000+05:30)
 - get the [amount of loans](type:amount) performance in [MP](region:MP) in [previous week](time:2019-07-24T00:00:00.000+05:30)
 - get me [loans](type:count) performance in [goa](region:goa) in [previous year](time:2019-07-24T00:00:00.000+05:30)
-
+- what is the [amount of loans](type:amount) performance in [MP](region:MP) in [previous week](time:2019-07-24T00:00:00.000+05:30)
 ## intent:helpSalesPerformance
 - Which is the [top](order:ascending) performing [sales](flag) officer for [last 6 months](time:2019-07-24T00:00:00.000+05:30) based on [amount](type:amount)?
 - Which is the [worst](order:descending) performing [sales](flag) officer for [last 1 year](time:2019-07-24T00:00:00.000+05:30) based on [count](type)?
@@ -115,6 +121,8 @@
 - Get me the total [live](ref_time:current) [loans](type:count) as of [last year](time)
 - How many [loans](type:count) created in the [last year](time) are still [active](ref_time:current)?
 - What is the [count](type:count) of [live](ref_time:current) loans as of [April 2019](time)?
+- show me the total [live](ref_time:current) [loans](type:count) as of [last year](time)
+- give me the total [live](ref_time:current) [loans](type:count) as of [last year](time)
 
 ## synonym:2019-07-24T00:00:00.000+05:30
 - today
@@ -133,6 +141,9 @@
 - much NPAs
 - much npas
 - much npa
+- amt
+- amnt
+- amout
 
 ## synonym:count
 - total npa
@@ -143,3 +154,18 @@
 - many npa
 - loan
 - loans
+- lans
+
+## synonym:disbursed
+- disbused
+- disbured
+- disburse
+- dissbursed
+
+## synonym:foreclosed
+- forceclosed
+- forclosed
+- fourclosed
+- foreclose
+- farclosed
+- fourclose

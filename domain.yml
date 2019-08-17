@@ -66,11 +66,14 @@ slots:
 templates:
   utter_anything_else:
   - text: No worries. Is there anything else I can help you with?
-  - text: No worries. Let me know if there is anything else I can help you with
+  - text: No worries. Would you like to ask anything else?
+  - text: Glad to help. Is there anything else you want to ask?
   utter_ask_help:
   - text: How can I help you?
+  - text: How can I be of your help?
+  - text: What's your query?
   utter_bye:
-  - text: Bye
+  - text: Bye, have a great day!
   utter_default:
   - text: I am not sure what you're aiming for
   - text: I am sorry but I am not able to get you.
@@ -79,5 +82,8 @@ templates:
   - text: Did that help you?
   utter_greet:
   - text: Hey!
+  - text: Hey there!
+  - text: Hii!
+  - text: Hello!
   utter_happy:
   - text: Great carry on!
